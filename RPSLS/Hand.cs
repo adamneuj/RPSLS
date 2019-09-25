@@ -6,15 +6,17 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Human
+    class Hand
     {
         // member variables
+        public string gesture;
 
         // constructor
-        public Human()
+        public Hand()
         {
 
         }
+
         // member methods
     }
 }

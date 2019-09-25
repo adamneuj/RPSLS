@@ -11,7 +11,10 @@ namespace RPSLS
         // member variables
 
         // constructor
+        public Computer()
+        {
 
+        }
         // member methods
     }
 }

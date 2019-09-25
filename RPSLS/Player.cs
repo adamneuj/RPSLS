@@ -9,7 +9,8 @@ namespace RPSLS
     class Player
     {
         // member variables
-        int score;
+        public int score;
+        public string name;
 
         // constructor
         public Player()
@@ -18,5 +19,6 @@ namespace RPSLS
         }
 
         // member methods
+
     }
 }

@@ -19,7 +19,6 @@ namespace RPSLS
 
 
         //member methods (CAN DO)
-
         public void RunGame()
         {
             DisplayRules();
