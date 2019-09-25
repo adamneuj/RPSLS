@@ -9,12 +9,14 @@ namespace RPSLS
     class Game
     {
         //member variables (HAS A)
-
+        public Player playerOne;
+        public Player playerTwo;
 
         //constructor
         public Game()
         {
-
+            playerOne = new Player;
+            playerTwo = new Player;
         }
 
 
