@@ -10,18 +10,20 @@ namespace RPSLS
     {
         //member variables (HAS A)
 
+
         //constructor
         public Game()
         {
 
         }
+
+
         //member methods (CAN DO)
 
         public void RunGame()
         {
             DisplayRules();
         }
-
 
         public void DisplayRules()
         {

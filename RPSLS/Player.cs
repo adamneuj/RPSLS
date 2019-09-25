@@ -9,8 +9,13 @@ namespace RPSLS
     class Player
     {
         // member variables
+        int score;
 
         // constructor
+        public Player()
+        {
+            score = 0;
+        }
 
         // member methods
     }

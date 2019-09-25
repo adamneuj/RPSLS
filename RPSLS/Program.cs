@@ -13,7 +13,7 @@ namespace RPSLS
             Game RPSLS = new Game();
             RPSLS.RunGame();
 
-            //Display rules
+            //Display rules !!
             //Player One selects either human or computer player
             //Player Two selects either human or computer player
             //Player One picks either Rock, Paper, Scissors, Lizard, or Spock
