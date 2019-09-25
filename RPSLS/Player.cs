@@ -12,6 +12,6 @@ namespace RPSLS
 
         // constructor
 
-        //member methods
+        // member methods
     }
 }

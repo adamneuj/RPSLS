@@ -8,10 +8,10 @@ namespace RPSLS
 {
     class Computer
     {
-        //member variables
+        // member variables
 
-        //constructor
+        // constructor
 
-        //member methods
+        // member methods
     }
 }
