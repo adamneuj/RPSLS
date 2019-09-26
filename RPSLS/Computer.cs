@@ -31,7 +31,7 @@ namespace RPSLS
             Hand hand = new Hand();
             gesture = hand.gestures[resultRandom];
             Console.WriteLine(gesture);
-            Console.WriteLine();
+            Console.ReadLine();
             return gesture;
         }
     }

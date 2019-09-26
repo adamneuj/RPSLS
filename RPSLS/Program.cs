@@ -12,17 +12,6 @@ namespace RPSLS
         {
             Game RPSLS = new Game();
             RPSLS.RunGame();
-
-            //Display rules !DONE!
-            //Player One selects either human or computer player !DONE!
-            //Player Two selects either human or computer player !DONE!
-            //Player One picks either Rock, Paper, Scissors, Lizard, or Spock !DONE!
-            //Player Two picks either Rock, Paper, Scissors, Lizard, or Spock !DONE!
-            //Compare gestures
-            //Determine winner of round
-            //Increment Winner Score
-            //Repeat until best two out of three
-            //Display winner
         }
     }
 }
