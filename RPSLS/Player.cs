@@ -12,7 +12,15 @@ namespace RPSLS
         public int score;
         public string name;
 
+        //constructor
+        public Player()
+        {
+            score = 0;
+            name = null;
+        }
+
         // member methods
+
 
     }
 }

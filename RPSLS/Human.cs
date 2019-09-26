@@ -13,7 +13,7 @@ namespace RPSLS
         // constructor
         public Human()
         {
-            score = 0;
+
         }
         // member methods
     }
