@@ -13,8 +13,16 @@ namespace RPSLS
         // constructor
         public Human()
         {
-
+            score = 0;
+            gesture = ChooseGesture();
+            name = null;
         }
         // member methods
+        public override string ChooseGesture()
+        {
+            Console.WriteLine("Rock, Paper, Scissors, Lizard, or Spock?");
+            gesture = Console.ReadLine();
+            return gesture;
+        }
     }
 }

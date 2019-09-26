@@ -25,6 +25,7 @@ namespace RPSLS
         {
             DisplayRules();
             PlayerSelect();
+            playerTwo.ChooseGesture();
             Console.ReadLine();
 
         }

@@ -11,16 +11,11 @@ namespace RPSLS
         // member variables
         public int score;
         public string name;
+        public string gesture;
 
-        //constructor
-        public Player()
-        {
-            score = 0;
-            name = null;
-        }
 
         // member methods
-
+        public abstract string ChooseGesture();
 
     }
 }

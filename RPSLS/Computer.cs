@@ -9,19 +9,28 @@ namespace RPSLS
     class Computer : Player
     {
         // member variables
-        public string gesture;
 
         // constructor
         public Computer()
         {
-
+            score = 0;
+            gesture = ChooseGesture();
+            name = "Computer";
         }
         // member methods
-        public int GenerateRandom() 
+        public static int GenerateRandom() 
         {
             Random random = new Random();
             int randomGesture = random.Next(0, 5);
             return randomGesture;
+        }
+
+        public override string ChooseGesture()
+        {
+            int resultRandom = GenerateRandom();
+            Hand hand = new Hand();
+            gesture = hand.gestures[resultRandom];
+            return gesture;
         }
     }
 }
