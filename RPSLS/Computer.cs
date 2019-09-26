@@ -6,15 +6,19 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Computer
+    class Computer : Player
     {
         // member variables
 
         // constructor
         public Computer()
         {
-
+            score = 0;
         }
         // member methods
+        public override void EnterName()
+        {
+            name = "Computer";
+        }
     }
 }

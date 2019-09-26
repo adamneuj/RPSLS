@@ -15,7 +15,7 @@ namespace RPSLS
         //constructor
         public Game()
         {
-
+            playerOne = new Human();
         }
 
 
@@ -23,6 +23,8 @@ namespace RPSLS
         public void RunGame()
         {
             DisplayRules();
+            playerOne.EnterName();
+            Console.ReadLine();
 
         }
 
@@ -38,6 +40,11 @@ namespace RPSLS
             Console.WriteLine("Spock smashes Scissors and vaporizes Rock.");
             Console.WriteLine("Press ANY KEY when ready to start game.");
             Console.ReadLine();
+        }
+
+        public void PlayerSelect()
+        {
+
         }
 
     }

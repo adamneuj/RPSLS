@@ -6,19 +6,13 @@ using System.Threading.Tasks;
 
 namespace RPSLS
 {
-    class Player
+    public abstract class Player
     {
         // member variables
         public int score;
         public string name;
 
-        // constructor
-        public Player()
-        {
-            score = 0;
-        }
-
         // member methods
-
+        public abstract void EnterName();
     }
 }
