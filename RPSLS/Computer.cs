@@ -30,6 +30,8 @@ namespace RPSLS
             int resultRandom = GenerateRandom();
             Hand hand = new Hand();
             gesture = hand.gestures[resultRandom];
+            Console.WriteLine(gesture);
+            Console.WriteLine();
             return gesture;
         }
     }

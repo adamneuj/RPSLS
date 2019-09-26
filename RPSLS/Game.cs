@@ -88,12 +88,59 @@ namespace RPSLS
         {
             while (winRounds >= playerOne.score && winRounds >= playerTwo.score)
             {
+                Console.WriteLine(playerOne.name + " choose:");
                 playerOne.ChooseGesture();
+                Console.WriteLine(playerTwo.name + " choose:");
                 playerTwo.ChooseGesture();
-                Console.WriteLine(playerOne.gesture);
-                Console.WriteLine(playerTwo.gesture);
+                DetermineRound();
+                DisplayScore();
             }
         }
 
+        public void DetermineRound()
+        {
+            if (playerOne.gesture == "rock" && (playerTwo.gesture == "lizard" || playerTwo.gesture == "scissors"))
+            {
+                Console.WriteLine(playerOne.name + " wins this round.");
+                playerOne.score++;
+            }
+            else if(playerOne.gesture == "paper" && (playerTwo.gesture == "rock" || playerTwo.gesture == "spock"))
+            {
+                Console.WriteLine(playerOne.name + " wins this round.");
+                playerOne.score++;
+            }
+            else if(playerOne.gesture == "scissors" && (playerTwo.gesture == "paper" || playerTwo.gesture == "lizard"))
+            {
+                Console.WriteLine(playerOne.name + " wins this round.");
+                playerOne.score++;
+            }
+            else if (playerOne.gesture == "lizard" && (playerTwo.gesture == "spock" || playerTwo.gesture == "scissors"))
+            {
+                Console.WriteLine(playerOne.name + " wins this round.");
+                playerOne.score++;
+            }
+            else if (playerOne.gesture == "spock" && (playerTwo.gesture == "rock" || playerTwo.gesture == "scissors"))
+            {
+                Console.WriteLine(playerOne.name + " wins this round.");
+                playerOne.score++;
+            }
+            else if (playerOne.gesture == playerTwo.gesture)
+            {
+                Console.WriteLine("Round tie. No point given.");
+            }
+            else
+            {
+                Console.WriteLine(playerTwo.name + " wins this round.");
+                playerTwo.score++;
+            }
+        }
+
+        public void DisplayScore()
+        {
+            Console.WriteLine("Score:");
+            Console.WriteLine(playerOne.name + ": " + playerOne.score);
+            Console.WriteLine(playerTwo.name + ": " + playerTwo.score);
+            Console.WriteLine();
+        }
     }
 }
