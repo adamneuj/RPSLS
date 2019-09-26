@@ -14,8 +14,8 @@ namespace RPSLS
             RPSLS.RunGame();
 
             //Display rules !DONE!
-            //Player One selects either human or computer player
-            //Player Two selects either human or computer player
+            //Player One selects either human or computer player !DONE!
+            //Player Two selects either human or computer player !DONE!
             //Player One picks either Rock, Paper, Scissors, Lizard, or Spock
             //Player Two picks either Rock, Paper, Scissors, Lizard, or Spock
             //Compare gestures

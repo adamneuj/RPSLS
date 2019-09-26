@@ -14,13 +14,7 @@ namespace RPSLS
         public Human()
         {
             score = 0;
-            name = null;
         }
         // member methods
-        public override void EnterName()
-        {
-            Console.WriteLine("Please enter your name:");
-            name = Console.ReadLine();
-        }
     }
 }

@@ -13,6 +13,6 @@ namespace RPSLS
         public string name;
 
         // member methods
-        public abstract void EnterName();
+
     }
 }

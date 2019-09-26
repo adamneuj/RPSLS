@@ -16,9 +16,5 @@ namespace RPSLS
             score = 0;
         }
         // member methods
-        public override void EnterName()
-        {
-            name = "Computer";
-        }
     }
 }
