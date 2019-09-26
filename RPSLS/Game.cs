@@ -15,8 +15,7 @@ namespace RPSLS
         //constructor
         public Game()
         {
-            playerOne = new Player();
-            playerTwo = new Player();
+
         }
 
 
@@ -24,8 +23,6 @@ namespace RPSLS
         public void RunGame()
         {
             DisplayRules();
-            Hand hand = new Hand(); //TEST CODE
-            hand.PrintGestures(); // TEST CODE
 
         }
 

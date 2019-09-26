@@ -10,6 +10,8 @@ namespace RPSLS
     {
         // member variables
         public List<string> gestures = new List<string>();
+        public int computerGesture;
+        public string humanGesture;
 
         // constructor
         public Hand()
@@ -19,18 +21,10 @@ namespace RPSLS
             gestures.Add("scissors");
             gestures.Add("lizard");
             gestures.Add("spock");
+            computerGesture = 0;
+            humanGesture = null;
         }
 
         // member methods
-
-        public void PrintGestures()
-        {
-            foreach (string gesture in gestures)
-            {
-                Console.WriteLine(gesture);
-                Console.ReadLine();
-            }
-        }
-
     }
 }
