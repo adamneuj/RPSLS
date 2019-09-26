@@ -15,8 +15,8 @@ namespace RPSLS
         //constructor
         public Game()
         {
-            playerOne = new Player;
-            playerTwo = new Player;
+            playerOne = new Player();
+            playerTwo = new Player();
         }
 
 
@@ -24,6 +24,9 @@ namespace RPSLS
         public void RunGame()
         {
             DisplayRules();
+            Hand hand = new Hand(); //TEST CODE
+            hand.PrintGestures(); // TEST CODE
+
         }
 
         public void DisplayRules()
@@ -39,5 +42,6 @@ namespace RPSLS
             Console.WriteLine("Press ANY KEY when ready to start game.");
             Console.ReadLine();
         }
+
     }
 }

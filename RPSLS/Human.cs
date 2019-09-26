@@ -9,7 +9,6 @@ namespace RPSLS
     class Human
     {
         // member variables
-        public string name;
 
         // constructor
         public Human()
