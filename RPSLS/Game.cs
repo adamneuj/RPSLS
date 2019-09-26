@@ -11,6 +11,7 @@ namespace RPSLS
         //member variables (HAS A)
         public Player playerOne;
         public Player playerTwo;
+        public int winRounds = 2;
         string tempString;
 
         //constructor
@@ -24,8 +25,9 @@ namespace RPSLS
         public void RunGame()
         {
             DisplayRules();
+            Console.WriteLine("Enter each player.  Type computer for a computer player.");
             PlayerSelect();
-            playerTwo.ChooseGesture();
+            GamePlayLoop();
             Console.ReadLine();
 
         }
@@ -46,8 +48,6 @@ namespace RPSLS
 
         public void PlayerSelect()
         {
-            Console.WriteLine("Enter each player.  Type computer for a computer player.");
-
             Console.WriteLine("Player One: ");
             tempString = Console.ReadLine();
                 if(tempString == "computer")
@@ -81,6 +81,17 @@ namespace RPSLS
             {
                 Console.WriteLine("Invalid input.  Please enter again.");
                 tempString = Console.ReadLine();
+            }
+        }
+
+        public void GamePlayLoop()
+        {
+            while (winRounds >= playerOne.score && winRounds >= playerTwo.score)
+            {
+                playerOne.ChooseGesture();
+                playerTwo.ChooseGesture();
+                Console.WriteLine(playerOne.gesture);
+                Console.WriteLine(playerTwo.gesture);
             }
         }
 

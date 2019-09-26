@@ -16,8 +16,8 @@ namespace RPSLS
             //Display rules !DONE!
             //Player One selects either human or computer player !DONE!
             //Player Two selects either human or computer player !DONE!
-            //Player One picks either Rock, Paper, Scissors, Lizard, or Spock
-            //Player Two picks either Rock, Paper, Scissors, Lizard, or Spock
+            //Player One picks either Rock, Paper, Scissors, Lizard, or Spock !DONE!
+            //Player Two picks either Rock, Paper, Scissors, Lizard, or Spock !DONE!
             //Compare gestures
             //Determine winner of round
             //Increment Winner Score

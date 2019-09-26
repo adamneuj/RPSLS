@@ -14,7 +14,7 @@ namespace RPSLS
         public Human()
         {
             score = 0;
-            gesture = ChooseGesture();
+            gesture = null;
             name = null;
         }
         // member methods

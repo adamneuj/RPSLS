@@ -14,7 +14,7 @@ namespace RPSLS
         public Computer()
         {
             score = 0;
-            gesture = ChooseGesture();
+            gesture = null;
             name = "Computer";
         }
         // member methods
