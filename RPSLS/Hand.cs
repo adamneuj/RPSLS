@@ -10,6 +10,7 @@ namespace RPSLS
     {
         // member variables
         public List<string> gestures = new List<string>();
+        public int gesturesCount;
 
         // constructor
         public Hand()
@@ -19,6 +20,9 @@ namespace RPSLS
             gestures.Add("scissors");
             gestures.Add("lizard");
             gestures.Add("spock");
+
+            gesturesCount = gestures.Count;
+
         }
 
         // member methods

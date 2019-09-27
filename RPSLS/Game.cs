@@ -25,7 +25,6 @@ namespace RPSLS
         public void RunGame()
         {
             DisplayRules();
-            Console.WriteLine("Enter each player.  Type computer for a computer player.");
             PlayerSelect();
             GamePlayLoop();
             DisplayWinner();
@@ -49,8 +48,10 @@ namespace RPSLS
 
         public void PlayerSelect()
         {
+            Console.WriteLine("Enter each player.  Type computer for a computer player.");
             Console.WriteLine("Player One: ");
             tempString = Console.ReadLine();
+            StringValidation();
                 if(tempString == "computer")
                 {
                     playerOne = new Computer();
@@ -63,7 +64,8 @@ namespace RPSLS
 
             Console.WriteLine("Player Two: ");
             tempString = Console.ReadLine();
-                if(tempString == "computer")
+            StringValidation();
+            if (tempString == "computer")
                 {
                     playerTwo = new Computer();
                 }
@@ -80,8 +82,29 @@ namespace RPSLS
 
             while (tempString == "" || tempString == null)
             {
-                Console.WriteLine("Invalid input.  Please enter again.");
+                Console.WriteLine("Invalid input.  Please enter Player again.");
                 tempString = Console.ReadLine();
+            }
+        }
+
+        public void ValidationLoop()
+        {
+            Hand validHand = new Hand();
+            bool validSwitch = false;
+            for (int i = 0; i < validHand.gesturesCount; i++)
+            {
+                if(validSwitch == true)
+                {
+                    continue;
+                }
+                else if(playerOne.gesture == validHand.gestures[i] || playerTwo.gesture == validHand.gestures[i])
+                {
+                    validSwitch = true;
+                }
+                else if(validSwitch != true)
+                {
+                    Console.WriteLine("Invalid input.  Please enter Rock, Paper, Scissors, Lizard, or Spock.");
+                }
             }
         }
 
@@ -164,10 +187,15 @@ namespace RPSLS
             string yesNo = Console.ReadLine();
             if (yesNo == "yes")
             {
-                playerOne.score = 0;
-                playerTwo.score = 0;
+                ScoreReset();
                 RunGame();
             }
+        }
+
+        public void ScoreReset()
+        {
+            playerOne.score = 0;
+            playerTwo.score = 0;
         }
     }
 }
