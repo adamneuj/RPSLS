@@ -61,7 +61,7 @@ namespace RPSLS
                     playerOne = new Human();
                     playerOne.name = tempString;
                 }
-
+            Console.WriteLine();
             Console.WriteLine("Player Two: ");
             tempString = Console.ReadLine();
             StringValidation();
@@ -74,7 +74,7 @@ namespace RPSLS
                     playerTwo = new Human();
                     playerTwo.name = tempString;
                 }
-
+            Console.Clear();
         }
 
         public void StringValidation()
@@ -105,6 +105,7 @@ namespace RPSLS
 
         public void DetermineRound()
         {
+            DisplayGestures();
             if (playerOne.gesture == "rock" && (playerTwo.gesture == "lizard" || playerTwo.gesture == "scissors"))
             {
                 Console.WriteLine(playerOne.name + " wins this round.");
@@ -143,22 +144,22 @@ namespace RPSLS
 
         public void DisplayScore()
         {
-            Console.WriteLine("Score:");
             Console.WriteLine(playerOne.name + ": " + playerOne.score);
             Console.WriteLine(playerTwo.name + ": " + playerTwo.score);
-            Console.WriteLine();
+            Console.ReadLine();
+            Console.Clear();
         }
 
         public void DisplayWinner()
         {
             if (playerOne.score == winRounds)
             {
-                Console.WriteLine(playerOne.name + " wins the game!  Congratulations!");
+                Console.WriteLine(playerOne.name + " wins the game!");
                 PlayAgain();
             }
             else
             {
-                Console.WriteLine(playerTwo.name + " wins the game!  Congratulations!");
+                Console.WriteLine(playerTwo.name + " wins the game!");
                 PlayAgain();
             }
         }
@@ -179,5 +180,13 @@ namespace RPSLS
             playerOne.score = 0;
             playerTwo.score = 0;
         }
+
+        public void DisplayGestures()
+        {
+            Console.WriteLine(playerOne.name + " chose: " + playerOne.gesture);
+            Console.WriteLine(playerTwo.name + " chose: " + playerTwo.gesture);
+            Console.WriteLine();
+        }
+
     }
 }

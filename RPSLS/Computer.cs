@@ -32,6 +32,7 @@ namespace RPSLS
             gesture = hand.gestures[resultRandom];
             Console.WriteLine(gesture);
             Console.ReadLine();
+            Console.Clear();
             return gesture;
         }
     }
