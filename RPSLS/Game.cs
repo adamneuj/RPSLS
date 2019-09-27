@@ -88,8 +88,6 @@ namespace RPSLS
             }
         }
 
-
-
         public void GamePlayLoop()
         {
             while (winRounds != playerOne.score && winRounds != playerTwo.score)
