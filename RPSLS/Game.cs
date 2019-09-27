@@ -171,6 +171,7 @@ namespace RPSLS
             if (yesNo == "yes")
             {
                 ScoreReset();
+                Console.Clear();
                 RunGame();
             }
         }
