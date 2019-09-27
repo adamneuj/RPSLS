@@ -22,8 +22,36 @@ namespace RPSLS
         {
             Console.WriteLine("Rock, Paper, Scissors, Lizard, or Spock?");
             gesture = Console.ReadLine();
+            ValidationLoop();
             Console.WriteLine();
             return gesture;
         }
+
+        public void ValidationLoop()
+        {
+            Hand validHand = new Hand();
+            bool validSwitch = false;
+            for (int i = 0; i < validHand.gesturesCount; i++)
+            {
+                if (gesture == validHand.gestures[i])
+                {
+                    validSwitch = true;
+                }
+                else if (gesture != validHand.gestures[i])
+                {
+                    continue;
+                }
+                else if (validSwitch == true)
+                {
+                    continue;
+                }
+            }
+            if (validSwitch == false)
+            {
+                Console.WriteLine("Invalid input.");
+                ChooseGesture();
+            }
+        }
+
     }
 }

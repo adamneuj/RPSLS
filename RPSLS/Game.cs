@@ -65,7 +65,7 @@ namespace RPSLS
             Console.WriteLine("Player Two: ");
             tempString = Console.ReadLine();
             StringValidation();
-            if (tempString == "computer")
+                if (tempString == "computer")
                 {
                     playerTwo = new Computer();
                 }
@@ -79,34 +79,16 @@ namespace RPSLS
 
         public void StringValidation()
         {
-
-            while (tempString == "" || tempString == null)
+            string validString = tempString;
+            validString = validString.Replace(" ", string.Empty);
+            while (validString == "" || validString == null)
             {
                 Console.WriteLine("Invalid input.  Please enter Player again.");
                 tempString = Console.ReadLine();
             }
         }
 
-        public void ValidationLoop()
-        {
-            Hand validHand = new Hand();
-            bool validSwitch = false;
-            for (int i = 0; i < validHand.gesturesCount; i++)
-            {
-                if(validSwitch == true)
-                {
-                    continue;
-                }
-                else if(playerOne.gesture == validHand.gestures[i] || playerTwo.gesture == validHand.gestures[i])
-                {
-                    validSwitch = true;
-                }
-                else if(validSwitch != true)
-                {
-                    Console.WriteLine("Invalid input.  Please enter Rock, Paper, Scissors, Lizard, or Spock.");
-                }
-            }
-        }
+
 
         public void GamePlayLoop()
         {
