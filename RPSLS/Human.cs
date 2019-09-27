@@ -22,6 +22,7 @@ namespace RPSLS
         {
             Console.WriteLine("Rock, Paper, Scissors, Lizard, or Spock?");
             gesture = Console.ReadLine();
+            gesture = gesture.ToLower();
             ValidationLoop();
             Console.Clear();
             return gesture;
