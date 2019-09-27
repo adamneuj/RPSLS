@@ -22,7 +22,6 @@ namespace RPSLS
             gestures.Add("spock");
 
             gesturesCount = gestures.Count;
-
         }
 
         // member methods

@@ -24,7 +24,7 @@ namespace RPSLS
         //member methods (CAN DO)
         public void RunGame()
         {
-            DisplayRules();
+            StandardMessages.DisplayRules();
             PlayerSelect();
             GamePlayLoop();
             DisplayWinner();
@@ -32,24 +32,10 @@ namespace RPSLS
 
         }
 
-        public void DisplayRules()
-        {
-            Console.WriteLine("Welcome to Rock, Paper, Scissors, Lizard, Spock!");
-            Console.WriteLine("First you will select whether each player will be either a human player or computer player.");
-            Console.WriteLine("Then each player will pick Rock, Paper, Scissors, Lizard, or Spock.");
-            Console.WriteLine("Rock crushes Scissors and Lizard.");
-            Console.WriteLine("Paper covers Rock and disproves Spock.");
-            Console.WriteLine("Scissors cuts Paper and decapitates Lizard.");
-            Console.WriteLine("Lizard eats Paper and poisons Spock.");
-            Console.WriteLine("Spock smashes Scissors and vaporizes Rock.");
-            Console.WriteLine("Press ANY KEY when ready to start game.");
-            Console.ReadLine();
-        }
-
         public void PlayerSelect()
         {
-            Console.WriteLine("Enter each player.  Type computer for a computer player.");
-            Console.WriteLine("Player One: ");
+            StandardMessages.EnterEachPlayer();
+            StandardMessages.PlayerOne();
             tempString = Console.ReadLine();
             StringValidation();
                 if(tempString == "computer")
@@ -62,7 +48,7 @@ namespace RPSLS
                     playerOne.name = tempString;
                 }
             Console.WriteLine();
-            Console.WriteLine("Player Two: ");
+            StandardMessages.PlayerTwo();
             tempString = Console.ReadLine();
             StringValidation();
                 if (tempString == "computer")
@@ -87,6 +73,7 @@ namespace RPSLS
                 tempString = Console.ReadLine();
             }
         }
+
 
         public void GamePlayLoop()
         {
