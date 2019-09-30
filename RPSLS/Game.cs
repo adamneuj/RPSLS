@@ -28,7 +28,6 @@ namespace RPSLS
             PlayerSelect();
             GamePlayLoop();
             DisplayWinner();
-            Console.ReadLine();
 
         }
         public void DisplayRules()
@@ -47,7 +46,7 @@ namespace RPSLS
 
         public void PlayerSelect()
         {
-            Console.WriteLine("Enter each player.  Type computer for a computer player.");
+            Console.WriteLine("Enter each player.  Type 'computer' for a computer player.");
             Console.WriteLine("Player One: ");
             tempString = Console.ReadLine();
             StringValidation();
